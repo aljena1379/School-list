@@ -13,7 +13,6 @@ namespace School_list
     public partial class formMain : Form
     {
         IStudentRepository repository;
-
         public formMain()
         {
             InitializeComponent();

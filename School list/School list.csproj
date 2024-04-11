@@ -33,8 +33,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,56 +55,74 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddStudentPage.cs">
+    <Compile Include="Data\Students.cs">
+      <DependentUpon>StudentsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StudentsModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StudentsModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\StudentsModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StudentsModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddStudentPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddStudentPage.Designer.cs">
+    <Compile Include="Forms\AddStudentPage.Designer.cs">
       <DependentUpon>AddStudentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassRepository.cs" />
-    <Compile Include="DeleteStudentPage.cs">
+    <Compile Include="Forms\DeleteStudentPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteStudentPage.Designer.cs">
+    <Compile Include="Forms\DeleteStudentPage.Designer.cs">
       <DependentUpon>DeleteStudentPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditStudentPage.cs">
+    <Compile Include="Forms\EditStudentPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditStudentPage.Designer.cs">
+    <Compile Include="Forms\EditStudentPage.Designer.cs">
       <DependentUpon>EditStudentPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainPage.cs">
+    <Compile Include="Forms\MainPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainPage.Designer.cs">
+    <Compile Include="Forms\MainPage.Designer.cs">
       <DependentUpon>MainPage.cs</DependentUpon>
     </Compile>
     <Compile Include="InterfaceRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ShowAllPage.cs">
+    <Compile Include="Forms\ShowAllPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowAllPage.Designer.cs">
+    <Compile Include="Forms\ShowAllPage.Designer.cs">
       <DependentUpon>ShowAllPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="ShowStudentsPage.cs">
+    <Compile Include="Forms\ShowStudentsPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ShowStudentsPage.Designer.cs">
+    <Compile Include="Forms\ShowStudentsPage.Designer.cs">
       <DependentUpon>ShowStudentsPage.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddStudentPage.resx">
+    <EmbeddedResource Include="Forms\AddStudentPage.resx">
       <DependentUpon>AddStudentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DeleteStudentPage.resx">
+    <EmbeddedResource Include="Forms\DeleteStudentPage.resx">
       <DependentUpon>DeleteStudentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditStudentPage.resx">
+    <EmbeddedResource Include="Forms\EditStudentPage.resx">
       <DependentUpon>EditStudentPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainPage.resx">
+    <EmbeddedResource Include="Forms\MainPage.resx">
       <DependentUpon>MainPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -107,12 +134,20 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ShowAllPage.resx">
+    <EmbeddedResource Include="Forms\ShowAllPage.resx">
       <DependentUpon>ShowAllPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ShowStudentsPage.resx">
+    <EmbeddedResource Include="Forms\ShowStudentsPage.resx">
       <DependentUpon>ShowStudentsPage.cs</DependentUpon>
     </EmbeddedResource>
+    <EntityDeploy Include="Data\StudentsModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>StudentsModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Data\StudentsModel.edmx.diagram">
+      <DependentUpon>StudentsModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +160,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\StudentsModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>StudentsModel.Context.cs</LastGenOutput>
+      <DependentUpon>StudentsModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Data\StudentsModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>StudentsModel.edmx</DependentUpon>
+      <LastGenOutput>StudentsModel.cs</LastGenOutput>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

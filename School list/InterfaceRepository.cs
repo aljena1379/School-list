@@ -1,4 +1,5 @@
-﻿using System;
+﻿using School_list.Data;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -7,14 +8,15 @@ using System.Threading.Tasks;
 
 namespace School_list
 {
-    internal interface IStudentRepository
+    public interface IStudentRepository
     {
-        bool Insert(string naturalIdNumber, string firstName, string lastName, string GetFatherName, 
-                    string classNumber);
-        bool Update(string naturalIdNumber, string firstName, string lastName, string GetFatherName, 
-                    string classNumber);
-        bool Delete(string naturalIdNumber);
-        DataTable SelectAll();
-        DataTable SelectRow(string naturalIdNumber);
+        bool Insert(Students student);
+        bool Update(Students student);
+        bool Delete(Students student);
+        //DataTable SelectAll();
+        //DataTable SelectRow(string naturalIdNumber);
+        List<Students> GetAllStudents();
+        List<Students> GetStudentsByClass(int classNumber);
+        Students GetStudentById(string naturalIdNumber);
     }
 }
