@@ -12,14 +12,10 @@ namespace School_list
 {
     public partial class formDeleteStudent : Form
     {
+        IStudentRepository repository;
         public formDeleteStudent()
         {
             InitializeComponent();
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void formDeleteStudent_Load(object sender, EventArgs e)
@@ -60,6 +56,19 @@ namespace School_list
         private void label7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            
+            //repository.Delete();
+            firstName.Text = "";
+            lastName.Text = "";
+            fatherName.Text = "";
+            classNumber.Text = "";
+            txtNaturalIdNumber.Text = "";
+            btnDelete.Enabled = false;
+            btnVerifyNaturalIdNumber.Enabled = true;
         }
     }
 }

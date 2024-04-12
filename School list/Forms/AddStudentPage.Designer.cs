@@ -70,6 +70,7 @@
             this.btnAddStudent.TabIndex = 1;
             this.btnAddStudent.Text = "Add";
             this.btnAddStudent.UseVisualStyleBackColor = true;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
             // 
             // txtFirstName
             // 

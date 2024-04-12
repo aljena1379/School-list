@@ -245,6 +245,7 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "formShowStudents";
             this.Text = "Show Students";
+            this.Load += new System.EventHandler(this.formShowStudents_Load);
             this.grpbxShowIndividual.ResumeLayout(false);
             this.grpbxShowIndividual.PerformLayout();
             this.grpbxShowByClass.ResumeLayout(false);

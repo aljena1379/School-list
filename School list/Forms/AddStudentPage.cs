@@ -36,5 +36,11 @@ namespace School_list
         {
 
         }
+
+        private void btnAddStudent_Click(object sender, EventArgs e)
+        {
+            StudentRepository repository = new StudentRepository();
+            //dgvShowAll.DataSource = repository.();
+        }
     }
 }

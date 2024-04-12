@@ -59,7 +59,6 @@
             this.lblNaturalIdNumber.Size = new System.Drawing.Size(199, 23);
             this.lblNaturalIdNumber.TabIndex = 1;
             this.lblNaturalIdNumber.Text = "Natural ID Number:";
-            this.lblNaturalIdNumber.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNaturalIdNumber
             // 
@@ -152,6 +151,7 @@
             this.btnDelete.TabIndex = 11;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // formDeleteStudent
             // 

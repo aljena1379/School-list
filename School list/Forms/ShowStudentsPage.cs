@@ -27,5 +27,10 @@ namespace School_list
             formShow form = new formShow();
             form.ShowDialog();
         }
+
+        private void formShowStudents_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
