@@ -67,5 +67,6 @@ namespace School_list
             txtClassNumber.Text = "";
             btnVerifyNaturalIdNumber.Enabled = true;
         }
+
     }
 }

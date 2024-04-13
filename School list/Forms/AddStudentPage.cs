@@ -36,5 +36,6 @@ namespace School_list
             txtFatherName.Text = "";
             txtClassNumber.Text = "";
         }
+
     }
 }

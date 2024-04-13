@@ -1,4 +1,6 @@
-﻿namespace School_list
+﻿using School_list.Forms;
+
+namespace School_list
 {
     partial class formMain
     {
@@ -58,8 +60,8 @@
             this.btnAddStudent.Text = "Add Student";
             this.btnAddStudent.UseVisualStyleBackColor = false;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            this.btnAddStudent.MouseEnter += new System.EventHandler(this.ButtonsMouseEnter);
-            this.btnAddStudent.MouseLeave += new System.EventHandler(this.ButtonsMouseLeave);
+            this.btnAddStudent.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnAddStudent.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // btnEditStudent
             // 
@@ -72,8 +74,8 @@
             this.btnEditStudent.Text = "Edit Student";
             this.btnEditStudent.UseVisualStyleBackColor = false;
             this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
-            this.btnEditStudent.MouseEnter += new System.EventHandler(this.ButtonsMouseEnter);
-            this.btnEditStudent.MouseLeave += new System.EventHandler(this.ButtonsMouseLeave);
+            this.btnEditStudent.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnEditStudent.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // btnShowStudents
             // 
@@ -86,8 +88,8 @@
             this.btnShowStudents.Text = "Show Students";
             this.btnShowStudents.UseVisualStyleBackColor = false;
             this.btnShowStudents.Click += new System.EventHandler(this.btnShowStudents_Click);
-            this.btnShowStudents.MouseEnter += new System.EventHandler(this.ButtonsMouseEnter);
-            this.btnShowStudents.MouseLeave += new System.EventHandler(this.ButtonsMouseLeave);
+            this.btnShowStudents.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnShowStudents.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // btnDeleteStudent
             // 
@@ -100,8 +102,8 @@
             this.btnDeleteStudent.Text = "Delete Student";
             this.btnDeleteStudent.UseVisualStyleBackColor = false;
             this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
-            this.btnDeleteStudent.MouseEnter += new System.EventHandler(this.ButtonsMouseEnter);
-            this.btnDeleteStudent.MouseLeave += new System.EventHandler(this.ButtonsMouseLeave);
+            this.btnDeleteStudent.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnDeleteStudent.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // formMain
             // 

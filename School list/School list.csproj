@@ -80,6 +80,7 @@
       <DependentUpon>AddStudentPage.cs</DependentUpon>
     </Compile>
     <Compile Include="ClassRepository.cs" />
+    <Compile Include="Forms\CosmeticAnimations.cs" />
     <Compile Include="Forms\DeleteStudentPage.cs">
       <SubType>Form</SubType>
     </Compile>

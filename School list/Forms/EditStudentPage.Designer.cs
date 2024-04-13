@@ -1,4 +1,6 @@
-﻿namespace School_list
+﻿using School_list.Forms;
+
+namespace School_list
 {
     partial class formEditStudent
     {
@@ -138,6 +140,8 @@
             this.btnEditStudent.Text = "Edit";
             this.btnEditStudent.UseVisualStyleBackColor = true;
             this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
+            this.btnEditStudent.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnEditStudent.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // lblFirstName
             // 
@@ -159,6 +163,8 @@
             this.btnVerifyNaturalIdNumber.Text = "Verify";
             this.btnVerifyNaturalIdNumber.UseVisualStyleBackColor = true;
             this.btnVerifyNaturalIdNumber.Click += new System.EventHandler(this.btnVerifyNaturalIdNumber_Click);
+            this.btnVerifyNaturalIdNumber.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnVerifyNaturalIdNumber.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // formEditStudent
             // 

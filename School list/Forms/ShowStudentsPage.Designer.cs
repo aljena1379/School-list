@@ -1,4 +1,6 @@
-﻿namespace School_list
+﻿using School_list.Forms;
+
+namespace School_list
 {
     partial class formShowStudents
     {
@@ -30,7 +32,7 @@
         {
             this.lblNaturalIdNumber = new System.Windows.Forms.Label();
             this.btnShowIndividual = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNaturalIdNumber = new System.Windows.Forms.TextBox();
             this.grpbxShowIndividual = new System.Windows.Forms.GroupBox();
             this.classNumber = new System.Windows.Forms.Label();
             this.lblClassNumer = new System.Windows.Forms.Label();
@@ -68,13 +70,14 @@
             this.btnShowIndividual.TabIndex = 1;
             this.btnShowIndividual.Text = "Show";
             this.btnShowIndividual.UseVisualStyleBackColor = true;
+            this.btnShowIndividual.Click += new System.EventHandler(this.btnShowIndividual_Click);
             // 
-            // textBox1
+            // txtNaturalIdNumber
             // 
-            this.textBox1.Location = new System.Drawing.Point(336, 23);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(224, 30);
-            this.textBox1.TabIndex = 2;
+            this.txtNaturalIdNumber.Location = new System.Drawing.Point(336, 23);
+            this.txtNaturalIdNumber.Name = "txtNaturalIdNumber";
+            this.txtNaturalIdNumber.Size = new System.Drawing.Size(224, 30);
+            this.txtNaturalIdNumber.TabIndex = 2;
             // 
             // grpbxShowIndividual
             // 
@@ -86,7 +89,7 @@
             this.grpbxShowIndividual.Controls.Add(this.lblLastName);
             this.grpbxShowIndividual.Controls.Add(this.firstName);
             this.grpbxShowIndividual.Controls.Add(this.lblFirstName);
-            this.grpbxShowIndividual.Controls.Add(this.textBox1);
+            this.grpbxShowIndividual.Controls.Add(this.txtNaturalIdNumber);
             this.grpbxShowIndividual.Controls.Add(this.btnShowIndividual);
             this.grpbxShowIndividual.Controls.Add(this.lblNaturalIdNumber);
             this.grpbxShowIndividual.Location = new System.Drawing.Point(34, 12);
@@ -199,7 +202,7 @@
             this.btnShowByClass.TabIndex = 4;
             this.btnShowByClass.Text = "Show";
             this.btnShowByClass.UseVisualStyleBackColor = true;
-            this.btnShowByClass.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowButtonClick);
+            this.btnShowByClass.Click += new System.EventHandler(this.btnShowByClass_Click);
             // 
             // lblClassNumberSearch
             // 
@@ -220,7 +223,6 @@
             this.btnShowAll.Text = "Show";
             this.btnShowAll.UseVisualStyleBackColor = true;
             this.btnShowAll.Click += new System.EventHandler(this.btnShowAll_Click);
-            this.btnShowAll.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ShowButtonClick);
             // 
             // lblShowAll
             // 
@@ -245,7 +247,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "formShowStudents";
             this.Text = "Show Students";
-            this.Load += new System.EventHandler(this.formShowStudents_Load);
             this.grpbxShowIndividual.ResumeLayout(false);
             this.grpbxShowIndividual.PerformLayout();
             this.grpbxShowByClass.ResumeLayout(false);
@@ -259,7 +260,7 @@
 
         private System.Windows.Forms.Label lblNaturalIdNumber;
         private System.Windows.Forms.Button btnShowIndividual;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNaturalIdNumber;
         private System.Windows.Forms.GroupBox grpbxShowIndividual;
         private System.Windows.Forms.Label classNumber;
         private System.Windows.Forms.Label lblClassNumer;

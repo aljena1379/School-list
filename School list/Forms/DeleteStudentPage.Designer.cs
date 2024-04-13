@@ -1,4 +1,6 @@
-﻿namespace School_list
+﻿using School_list.Forms;
+
+namespace School_list
 {
     partial class formDeleteStudent
     {
@@ -51,6 +53,8 @@
             this.btnVerifyNaturalIdNumber.Text = "Verify";
             this.btnVerifyNaturalIdNumber.UseVisualStyleBackColor = true;
             this.btnVerifyNaturalIdNumber.Click += new System.EventHandler(this.btnVerifyNaturalIdNumber_Click);
+            this.btnVerifyNaturalIdNumber.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnVerifyNaturalIdNumber.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // lblNaturalIdNumber
             // 
@@ -84,7 +88,6 @@
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(0, 23);
             this.firstName.TabIndex = 4;
-            this.firstName.Click += new System.EventHandler(this.label2_Click);
             // 
             // lastName
             // 
@@ -93,7 +96,6 @@
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(0, 23);
             this.lastName.TabIndex = 6;
-            this.lastName.Click += new System.EventHandler(this.label3_Click);
             // 
             // lblLastName
             // 
@@ -103,7 +105,6 @@
             this.lblLastName.Size = new System.Drawing.Size(118, 23);
             this.lblLastName.TabIndex = 5;
             this.lblLastName.Text = "Last Name:";
-            this.lblLastName.Click += new System.EventHandler(this.lblLastName_Click);
             // 
             // fatherName
             // 
@@ -112,7 +113,6 @@
             this.fatherName.Name = "fatherName";
             this.fatherName.Size = new System.Drawing.Size(0, 23);
             this.fatherName.TabIndex = 8;
-            this.fatherName.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblFatherName
             // 
@@ -122,7 +122,6 @@
             this.lblFatherName.Size = new System.Drawing.Size(139, 23);
             this.lblFatherName.TabIndex = 7;
             this.lblFatherName.Text = "Father Name:";
-            this.lblFatherName.Click += new System.EventHandler(this.lblFatherName_Click);
             // 
             // classNumber
             // 
@@ -131,7 +130,6 @@
             this.classNumber.Name = "classNumber";
             this.classNumber.Size = new System.Drawing.Size(0, 23);
             this.classNumber.TabIndex = 10;
-            this.classNumber.Click += new System.EventHandler(this.label7_Click);
             // 
             // lblClassNumber
             // 
@@ -141,7 +139,6 @@
             this.lblClassNumber.Size = new System.Drawing.Size(149, 23);
             this.lblClassNumber.TabIndex = 9;
             this.lblClassNumber.Text = "Class Number:";
-            this.lblClassNumber.Click += new System.EventHandler(this.lblClassNumber_Click);
             // 
             // btnDelete
             // 
@@ -153,6 +150,8 @@
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            this.btnDelete.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnDelete.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // formDeleteStudent
             // 
@@ -175,7 +174,6 @@
             this.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.Name = "formDeleteStudent";
             this.Text = "Delete Student";
-            this.Load += new System.EventHandler(this.formDeleteStudent_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

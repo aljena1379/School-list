@@ -1,4 +1,6 @@
-﻿namespace School_list
+﻿using School_list.Forms;
+
+namespace School_list
 {
     partial class formAddStudent
     {
@@ -70,6 +72,8 @@
             this.btnAddStudent.Text = "Add";
             this.btnAddStudent.UseVisualStyleBackColor = true;
             this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            this.btnAddStudent.MouseEnter += new System.EventHandler(CosmeticAnimations.ButtonsMouseEnter);
+            this.btnAddStudent.MouseLeave += new System.EventHandler(CosmeticAnimations.ButtonsMouseLeave);
             // 
             // txtFirstName
             // 

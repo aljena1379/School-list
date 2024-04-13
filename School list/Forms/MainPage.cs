@@ -42,17 +42,6 @@ namespace School_list
             formEditStudent form = new formEditStudent();
             form.ShowDialog();
         }
-
-        private void ButtonsMouseEnter(object sender, EventArgs e)
-        {
-            ((Button)sender).ForeColor = Color.Red;
-            ((Button)sender).BackColor = Color.Silver;
-        }
-
-        private void ButtonsMouseLeave(object sender, EventArgs e)
-        {
-            ((Button)sender).ForeColor = Color.Black;
-            ((Button)sender).BackColor = Color.LightGray;
-        }
+       
     }
 }
