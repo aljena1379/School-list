@@ -13,6 +13,14 @@ namespace School_list
     public class StudentRepository : IStudentRepository
     {
         private School_DBEntities db = new School_DBEntities();
+
+        public bool CheckNaturalIdNumberExistence(string naturalIdNumber)
+        {
+            var id = db.Students.FirstOrDefault(s => s.Natural_ID_number == naturalIdNumber);
+            bool repetetiveId = (id != null);
+            return repetetiveId;
+        }
+
         public bool Delete(Students student)
         {
             try
@@ -55,16 +63,6 @@ namespace School_list
                 return false;
             }
         }
-
-        //public DataTable SelectAll()
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        //public DataTable SelectRow(string naturalIdNumber)
-        //{
-        //    throw new NotImplementedException();
-        //}
 
         public bool Update(Students student)
         {

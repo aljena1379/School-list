@@ -39,15 +39,13 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.btnEditStudent = new System.Windows.Forms.Button();
             this.lblFirstName = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.btnVerifyNaturalIdNumber = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtClassNumber
             // 
             this.txtClassNumber.Enabled = false;
-            this.txtClassNumber.Location = new System.Drawing.Point(269, 281);
+            this.txtClassNumber.Location = new System.Drawing.Point(269, 240);
             this.txtClassNumber.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtClassNumber.Name = "txtClassNumber";
             this.txtClassNumber.Size = new System.Drawing.Size(298, 30);
@@ -56,7 +54,7 @@
             // lblClassNumber
             // 
             this.lblClassNumber.AutoSize = true;
-            this.lblClassNumber.Location = new System.Drawing.Point(40, 284);
+            this.lblClassNumber.Location = new System.Drawing.Point(40, 243);
             this.lblClassNumber.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.lblClassNumber.Name = "lblClassNumber";
             this.lblClassNumber.Size = new System.Drawing.Size(149, 23);
@@ -66,7 +64,7 @@
             // txtFatherName
             // 
             this.txtFatherName.Enabled = false;
-            this.txtFatherName.Location = new System.Drawing.Point(269, 241);
+            this.txtFatherName.Location = new System.Drawing.Point(269, 200);
             this.txtFatherName.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.txtFatherName.Name = "txtFatherName";
             this.txtFatherName.Size = new System.Drawing.Size(298, 30);
@@ -75,7 +73,7 @@
             // lblFatherName
             // 
             this.lblFatherName.AutoSize = true;
-            this.lblFatherName.Location = new System.Drawing.Point(40, 244);
+            this.lblFatherName.Location = new System.Drawing.Point(40, 203);
             this.lblFatherName.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
             this.lblFatherName.Name = "lblFatherName";
             this.lblFatherName.Size = new System.Drawing.Size(139, 23);
@@ -89,6 +87,7 @@
             this.txtNaturalIdNumber.Name = "txtNaturalIdNumber";
             this.txtNaturalIdNumber.Size = new System.Drawing.Size(298, 30);
             this.txtNaturalIdNumber.TabIndex = 17;
+            this.txtNaturalIdNumber.TextChanged += new System.EventHandler(this.txtNaturalIdNumber_TextChanged);
             // 
             // lblNaturalIdNumber
             // 
@@ -131,13 +130,14 @@
             // btnEditStudent
             // 
             this.btnEditStudent.Enabled = false;
-            this.btnEditStudent.Location = new System.Drawing.Point(206, 334);
+            this.btnEditStudent.Location = new System.Drawing.Point(206, 305);
             this.btnEditStudent.Margin = new System.Windows.Forms.Padding(12, 9, 12, 9);
             this.btnEditStudent.Name = "btnEditStudent";
             this.btnEditStudent.Size = new System.Drawing.Size(111, 38);
             this.btnEditStudent.TabIndex = 12;
             this.btnEditStudent.Text = "Edit";
             this.btnEditStudent.UseVisualStyleBackColor = true;
+            this.btnEditStudent.Click += new System.EventHandler(this.btnEditStudent_Click);
             // 
             // lblFirstName
             // 
@@ -149,27 +149,6 @@
             this.lblFirstName.TabIndex = 11;
             this.lblFirstName.Text = "First Name:";
             // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(269, 201);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(298, 30);
-            this.textBox1.TabIndex = 23;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(40, 204);
-            this.label1.Margin = new System.Windows.Forms.Padding(12, 0, 12, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(199, 23);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Natural ID Number:";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
             // btnVerifyNaturalIdNumber
             // 
             this.btnVerifyNaturalIdNumber.Location = new System.Drawing.Point(206, 58);
@@ -179,6 +158,7 @@
             this.btnVerifyNaturalIdNumber.TabIndex = 24;
             this.btnVerifyNaturalIdNumber.Text = "Verify";
             this.btnVerifyNaturalIdNumber.UseVisualStyleBackColor = true;
+            this.btnVerifyNaturalIdNumber.Click += new System.EventHandler(this.btnVerifyNaturalIdNumber_Click);
             // 
             // formEditStudent
             // 
@@ -186,8 +166,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(704, 432);
             this.Controls.Add(this.btnVerifyNaturalIdNumber);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtClassNumber);
             this.Controls.Add(this.lblClassNumber);
             this.Controls.Add(this.txtFatherName);
@@ -221,8 +199,6 @@
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.Button btnEditStudent;
         private System.Windows.Forms.Label lblFirstName;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVerifyNaturalIdNumber;
     }
 }

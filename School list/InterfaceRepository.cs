@@ -13,6 +13,7 @@ namespace School_list
         bool Insert(Students student);
         bool Update(Students student);
         bool Delete(Students student);
+        bool CheckNaturalIdNumberExistence(string naturalIdNumber);
         //DataTable SelectAll();
         //DataTable SelectRow(string naturalIdNumber);
         List<Students> GetAllStudents();

@@ -24,14 +24,14 @@ namespace School_list
         private void frmShowAll_Load(object sender, EventArgs e)
         {
             StudentRepository repository = new StudentRepository();
-            if (e == null)
-            {
+            //if (e == null)
+            //{
                 dgvShowAll.DataSource = repository.GetAllStudents();
-            }
-            else
-            {
+            //}
+            //else
+            //{
                 //dgvShowAll.DataSource = repository.GetStudentsByClass(e.ToString);
-            }
+            //}
         }
     }
 }

@@ -59,7 +59,6 @@
             this.lblFirstName.Size = new System.Drawing.Size(121, 23);
             this.lblFirstName.TabIndex = 0;
             this.lblFirstName.Text = "First Name:";
-            this.lblFirstName.Click += new System.EventHandler(this.lblFirstName_Click);
             // 
             // btnAddStudent
             // 
@@ -95,7 +94,6 @@
             this.lblLastName.Size = new System.Drawing.Size(118, 23);
             this.lblLastName.TabIndex = 3;
             this.lblLastName.Text = "Last Name:";
-            this.lblLastName.Click += new System.EventHandler(this.lblLastName_Click);
             // 
             // txtNaturalIdNumber
             // 
@@ -113,7 +111,6 @@
             this.lblNaturalIdNumber.Size = new System.Drawing.Size(199, 23);
             this.lblNaturalIdNumber.TabIndex = 5;
             this.lblNaturalIdNumber.Text = "Natural ID Number:";
-            this.lblNaturalIdNumber.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtFatherName
             // 
@@ -131,7 +128,6 @@
             this.lblFatherName.Size = new System.Drawing.Size(139, 23);
             this.lblFatherName.TabIndex = 7;
             this.lblFatherName.Text = "Father Name:";
-            this.lblFatherName.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtClassNumber
             // 

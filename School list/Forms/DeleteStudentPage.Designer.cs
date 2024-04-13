@@ -50,6 +50,7 @@
             this.btnVerifyNaturalIdNumber.TabIndex = 0;
             this.btnVerifyNaturalIdNumber.Text = "Verify";
             this.btnVerifyNaturalIdNumber.UseVisualStyleBackColor = true;
+            this.btnVerifyNaturalIdNumber.Click += new System.EventHandler(this.btnVerifyNaturalIdNumber_Click);
             // 
             // lblNaturalIdNumber
             // 
